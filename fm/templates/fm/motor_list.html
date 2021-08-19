@@ -1,0 +1,8 @@
+<h1>All Motors</h1>
+{% for motor in object_list %}
+    <ul>
+        <li>OEM: {{ motor.oem }}</li>
+        <li>Qty: {{ motor.qty }}</li>
+        <li>HPower: {{ motor.hp }}</li>
+    </ul>
+{% endfor %}
