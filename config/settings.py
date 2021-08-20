@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
 import dj_database_url
+import psycopg2
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -26,7 +27,7 @@ SECRET_KEY = '9s&3e&8-23c5p5j43c3ozyisr34=b@e47v3te0@-pz!!^4ai5u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -95,6 +96,7 @@ DATABASES = {
 }
 db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
+
 
 
 
