@@ -94,7 +94,7 @@ DATABASES = {
         'PORT': '',
     }
 }
-db_from_env = dj_database_url.config()
+db_from_env = dj_database_url.config(default=os.environ.get('DATABASE_URL'))
 DATABASES['default'].update(db_from_env)
 
 
